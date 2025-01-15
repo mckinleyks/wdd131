@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name=""viewport" content="width-device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a home page for WDD 131 - Dynamic Web Fundamentals course - McKinley Saunders.">
+    <meta name="author" content="McKinley Saunders">
+    <title>WDD 131 - Dynamic Web Fundamentals - McKinley Saunders</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="styles/scripts/getdates.js"></script>
 </head>
 <body>
-    <h1> WDD 131 - Saunders</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - McKinley Saunders</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/mckinley-saunders-429985125/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/courses" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng#intro1" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="card">
+            <div class="about-me-header">
+                <h2>About Me</h2>
+            </div>
 
+            <div class="about-me-content">
+                <div class="bio">
+                    <p>My name is McKinley and I'm from West Jordan, UT. I have 2 children, 6 and 4. I love to travel, anything outdoors, music and being progressive.</p>
+                </div>
+            
+                <div class="bio-image">
+                    <img src="styles/scripts/images/profile.jpg" alt="Profile Picture" >
+                </div>
+            </div>
+        
+            <div class="utah-header">
+                <h3>West Jordan, Utah</h3>
+            </div>
+
+            <div class="utah-info">
+                <div class="info">
+                    <p>Utah is known as 'The Beehive State' and shares The Four Corners with 3 other states. It is known for it's natural diversity and it's outdoor recreational activities. It was the 45th state founded in 1896.</p>
+                </div>
+                    
+                <div class="utah-image">
+                    <img src="styles/scripts/images/utah.jpg" alt="Utah Picture">
+                </div>
+            </div>
+
+        </section>
+
+        <section class ="card">
+            <div class="web-header">
+                <h2>Web Dev Resources</h2>
+            </div>
+
+            <div class="resources">
+                <ul>
+                    <li>Dev.to Community target</li>
+                    <li>Smashing Magazine</li>
+                    <li>CSS Tricks</li>
+                    <li>Udemy</li>
+                    <li>Image Placeholder</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; <span id="currentyear"></span> McKinley Saunders, Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+    
 </body>
 </html>
