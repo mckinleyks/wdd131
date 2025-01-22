@@ -27,12 +27,8 @@ h1 {
 }
 nav {
     background-color: rgb(25, 25, 117);
-    nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-    }
 }
+
 
 nav a {
     display: block;
