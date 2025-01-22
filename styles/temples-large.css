@@ -1,45 +1,166 @@
-#menu, #menu ul {
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
+    box-sizing: border-box;
 }
 
-#menu {
+
+body  {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header {
+    background-color: rgb(25, 25, 117);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid pink;
+    box-shadow: 0 0 30px grey;
+}
+
+header, main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+nav {
+    background-color: rgb(25, 25, 117);
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#hamburger {
     display: none;
 }
 
+/*#menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: rgb(25, 25, 117);
+    border-radius: 8px;
+    width: 150px;
+    z-index: 1000;
+    text-align: center;
+
+}*/
+
 
 @media (min-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
-@media (min-width: 800px) {
+    
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
     }
+    
+    
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
     #hamburger {
         display: none;
     }
+}
+
     
-    #menu {
+
+@media (min-width: 900px) {
+    header {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        max-width: 960px;
-        margin: 0 auto;
+        background-color: rgb(25, 25, 117);
+        color: white;
     }
 
-    #menu ul {
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        flex-direction: row; 
+        
+    }
+
+    nav a {
+        flex: 1 1 100%;
+        text-decoration: none !important;
+    }
+    
+    /*#menu {
+        display: flex !important;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        position: static;
+        width: auto;
+        background: none;
+    }
+    #menu .navigation {
+        display: flex !important;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #menu .navigation li {
+        margin: 0;
+        
+    }
+
+    #menu .navigation a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(25, 25, 117);
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    
+    }
+
+    #menu .navigation a {
+        display: flex;
+    }
+    
+    
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /*#menu ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding: 0 15px;
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 960px;
+        margin: 0;
         list-style: none;
     }
 
@@ -53,11 +174,42 @@
         padding: 5px 8px;
         text-decoration: none;
         border-radius: 5px;
-    }
+        display: inline-block;
+        text-align: center;
+    }*/
 
-    #menu a:hover {
+        #hamburger, #close {
+            display: none !important;
+        }
+
+    nav a:hover {
         background-color: pink;
         color: rgb(25, 25, 117);
         border-radius: 5px;
     }
+
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
+    
 }

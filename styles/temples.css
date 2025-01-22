@@ -30,10 +30,24 @@ header {
     font-size: 30px;
     cursor: pointer;
     color: white;
+    display: block;
+}
+
+#close {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #menu {
     display: none;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(25, 25, 117);
     padding: 10px;
     border-radius: 8px;
@@ -42,19 +56,24 @@ header {
     right: 10px;
     width: 150px;
     z-index: 1000;
-    text-align: center;
 }
 
-#menu ul {
+nav.visible {
+    display: flex;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
     margin: 0;
     padding: 0;
     
 }
 
-#menu.visible {
+nav .visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,11 +81,11 @@ header {
     border-radius: 8px;
 }
 
-#menu li {
+nav li {
     width: 100%;
 }
 
-#menu a {
+nav a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
@@ -78,7 +97,7 @@ header {
     padding: 10px;
 }
 
-#menu a:hover {
+nav a:hover {
     background-color: pink;
     color: rgb(25, 25, 117);
 }
@@ -96,7 +115,7 @@ header {
 
 }
 
-.navigation {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -107,19 +126,13 @@ header {
     gap: 15px;
 }
 
-.navigation a {
+nav a {
     text-decoration: none;
     color: White;
     padding: 5px 10px;
     text-align: center;
     width: 100%;
 
-}
-
-.navigation a:hover {
-    background-color: pink;
-    color: rgb(25, 25, 117);
-    border-radius: 5px;
 }
 
 main {
