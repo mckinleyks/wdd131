@@ -144,7 +144,7 @@ main {
 }
 
 main h2 {
-    text-size-adjust: bigger;
+    text-size-adjust: 40px;
     padding: 20px;
 }
 
