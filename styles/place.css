@@ -3,6 +3,8 @@
     --secondary-color: rgb(92, 91, 91);
     --font-size-header: 2.5rem;
     --gap-size: 1rem;
+    --max-width: 1400px;
+    --max-height: auto;
 
 }
 
@@ -136,6 +138,14 @@ footer p {
 @media (min-width: 801px) {
     .weather img {
         display: none;
+    }
+
+    body {
+        max-width: var(--max-width);
+        max-height: var(--max-height);
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero {
