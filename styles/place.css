@@ -154,7 +154,7 @@ footer p {
 
     .weather h2::after {
         content:' 🌤️';
-        margin-left: 0.5;
+        margin-left: 0.5rem;
     }
 
     .weather {
