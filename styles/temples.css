@@ -24,6 +24,26 @@ header {
     padding: 15px;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+/*nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgb(25, 25, 117);
+    border-radius: 5px;
+
+} nav a:hover {
+    background-color: pink;
+    color: rgb(25, 25, 117)
+}*/
+
 #hamburger {
     background: none;
     border: none;
@@ -42,6 +62,7 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
+    cursor: pointer;
 }
 
 #menu {
@@ -58,11 +79,15 @@ header {
     z-index: 1000;
 }
 
-nav.visible {
+nav.visible ul {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul {
+/*nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -83,7 +108,7 @@ nav .visible {
 
 nav li {
     width: 100%;
-}
+}*/
 
 nav a {
     color: white;
@@ -102,7 +127,7 @@ nav a:hover {
     color: rgb(25, 25, 117);
 }
 
-#close {
+/*#close {
     background: none;
     border: none;
     font-size: 30px;
@@ -133,7 +158,7 @@ nav a {
     text-align: center;
     width: 100%;
 
-}
+}*/
 
 main {
     justify-content: center;
