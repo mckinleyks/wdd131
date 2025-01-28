@@ -3,34 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const menu = document.getElementById("menu");
     const closeButton = document.getElementById("close");
 
+    hamburgerButton.addEventListener("click", () => {
+        menu.classList.add("visible");
+    });
 
+    closeButton.addEventListener("click", () => {
+        menu.classList.remove("visible");
+    })
 
-    if (hamburgerButton && menu && closeButton) {
-        hamburgerButton.addEventListener("click", () => {
-            if (menu.classList.contains("hidden")) {
-                menu.classList.remove("hidden");
-                menu.classList.add("visible");
-                hamburgerButton.style.display = "none";
-                closeButton.style.display = "block";
+    console.log("Hamburger and Close Button Listeners Attached");
 
-            } else {
-                menu.classList.remove("visible");
-                menu.classList.add("hidden");
-                hamburgerButton.style.display = "block";
-                closeButton.style.display = "none";
-            }
-        });
-
-        closeButton.addEventListener("click", () => {
-            menu.classList.remove("visible");
-            menu.classList.add("hidden");
-            hamburgerButton.style.display = "block";
-            closeButton.style.display = "none";
-        });
-
-    } else {
-        console.error("Elements not found: hamburgerButton, menu, or closeButton");
-    }
 
     const yearElement = document.getElementById("year");
     const currentYear = new Date().getFullYear();

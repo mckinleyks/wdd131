@@ -11,11 +11,11 @@ body  {
 
 header {
     background-color: rgb(25, 25, 117);
-    display: grid;
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    border: 1px solid pink;
-    box-shadow: 0 0 30px grey;
+    color: white;
 }
 
 header, main {
@@ -43,22 +43,62 @@ nav a {
     display: none;
 }
 
-/*#menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: rgb(25, 25, 117);
-    border-radius: 8px;
-    width: 150px;
-    z-index: 1000;
-    text-align: center;
-
-}*/
-
-
 @media (min-width: 600px) {
 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    #hamburger {
+        display: block;
+        background: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(25, 25, 117);
+        padding: 20px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    #menu.visible {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    #close {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #menu a:hover {
+        background-color: pink;
+        color: rgb(25, 25, 117);
+    }
     
     .gallery {
         display: grid;
@@ -79,14 +119,11 @@ nav a {
         margin: 0 auto;
     }
 
-    #hamburger {
-        display: none;
-    }
 }
-
     
 
 @media (min-width: 900px) {
+    
     header {
         display: flex;
         justify-content: space-between;
@@ -95,88 +132,40 @@ nav a {
         color: white;
     }
 
+    #hamburger, #close {
+        display: none !important;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: row !important;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        
+    }
+
     nav ul {
         display: flex;
         list-style: none;
         justify-content: flex-end;
         flex-direction: row; 
+        margin: 0;
+        padding: 0;
+        gap: 20px;       
         
     }
 
     nav a {
-        flex: 1 1 100%;
-        text-decoration: none !important;
-    }
-    
-    /*#menu {
-        display: flex !important;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        position: static;
-        width: auto;
-        background: none;
-    }
-    #menu .navigation {
-        display: flex !important;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    #menu .navigation li {
-        margin: 0;
-        
-    }
-
-    #menu .navigation a {
-        display: block;
-        text-decoration: none;
-        color: white;
-        background-color: rgb(25, 25, 117);
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    
-    }
-
-    #menu .navigation a {
-        display: flex;
-    }
-    
-    
-    .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    /*#menu ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0 15px;
-        max-width: 960px;
-        margin: 0;
-        list-style: none;
-    }
-
-    #menu li {
-        margin-right: 10px;
-    }
-
-    #menu a {
-        color: white;
-        background-color: rgb(25, 25, 117);
-        padding: 5px 8px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
+        padding: 5px 10px;
+        border: none;
         text-align: center;
-    }*/
+        color: white;
+        justify-content: space-between;
+    
+    }
 
-        #hamburger, #close {
-            display: none !important;
-        }
 
     nav a:hover {
         background-color: pink;
@@ -204,8 +193,4 @@ nav a {
         display: block;
         margin: 0 auto;
     }
-
-
-
-    
 }
