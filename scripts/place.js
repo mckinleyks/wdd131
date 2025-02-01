@@ -6,7 +6,10 @@ function calculateWindChill(temperature, windSpeed) {
     } else {
         return "N/A";
     }
+
+
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

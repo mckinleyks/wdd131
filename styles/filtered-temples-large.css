@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body  {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header {
+    background-color: rgb(25, 25, 117);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+header, main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+nav {
+    background-color: rgb(25, 25, 117);
+}
+
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#hamburger {
+    display: none;
+}
+
+@media (min-width: 600px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    #hamburger {
+        display: block;
+        background: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(25, 25, 117);
+        padding: 20px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    #menu.visible {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    #close {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #menu a:hover {
+        background-color: pink;
+        color: rgb(25, 25, 117);
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        border: 1px solid gray;
+    }
+    
+    
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgba(0, 0, 0, .3);
+    }
+
+}
+    
+
+@media (min-width: 900px) {
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(25, 25, 117);
+        color: white;
+    }
+
+    #hamburger, #close {
+        display: none !important;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: row !important;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        flex-direction: row; 
+        margin: 0;
+        padding: 0;
+        gap: 20px;       
+        
+    }
+
+    nav a {
+        padding: 5px 10px;
+        border: none;
+        text-align: center;
+        color: white;
+        justify-content: space-between;
+    
+    }
+
+
+    nav a:hover {
+        background-color: pink;
+        color: rgb(25, 25, 117);
+        border-radius: 5px;
+    }
+
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
