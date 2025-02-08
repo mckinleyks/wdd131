@@ -22,7 +22,7 @@ form {
     margin-bottom: 10px;
 }
 
-#product,
+
 #installDate,
 #userName,
 #post {
@@ -36,8 +36,9 @@ form {
 
 }
 
-#product {
-    margin-bottom: 30px;
+#productName {
+    margin-bottom: 25px;
+    font-size: 15px;
 }
 
 
