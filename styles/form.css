@@ -1,3 +1,8 @@
+body {
+    font-family: "Noto Sans", serif;
+}
+
+
 header {
     background-color: rgb(247, 160, 203);
     color: black;
