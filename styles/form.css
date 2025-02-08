@@ -122,6 +122,10 @@ input[type="checkbox"] {
     border-color: black;
 }
 
+#star1, #star2, #star3, #star4, #star5 {
+    margin-left: 10px;
+}
+
 
 .star-label {
     font-size: 24px;
