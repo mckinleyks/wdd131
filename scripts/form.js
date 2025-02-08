@@ -6,7 +6,7 @@ const products = [
     { name: "Product 5" },
 ];
 
-const productSelect = document.getElementById('product');
+const productSelect = document.getElementById('productName');
 
 products.forEach(product => {
     const option = document.createElement('option');
