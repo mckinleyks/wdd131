@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    loadTheme();
     displayDestinations();
 });
 
