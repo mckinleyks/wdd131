@@ -9,58 +9,94 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather:wght@300;400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="Scripts/siteplan.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Bucket List Travel Site Plan</h1>
-
+        <h1>Bucket List Travel</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="luxury.html">Luxury</a></li>
+                <li><a href="budget.html">Budget-Friendly</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
+
     <section id="site-name">
-        <h2>Site Name</h2>
-        <p><strong>Bucket List Travels</strong></p>
-        <p>This name represents hopes and dreams. Memories and experiences made and had with loved ones.</p>
-        <p>Optional domain availability: BucketListTravels.com</p>
+        <h2>Dream Vacations</h2>
+        <div class="image-container">
+            <img class="home-image" src="images/phuket.jpg" alt="Phuket">
+            <img class="home-image" src="images/camels.jpg" alt="Dubai">
+            <img class="home-image" src="images/dubai.png" alt="Dubai">
+            <img class="home-image" src="images/japan.jpg" alt="Japan">
+            <img class="home-image" src="images/beach.jpg" alt="Maldives">
+            <img class="home-image" src="images/view.jpg" alt="Indonesia">
+        </div>
+        <p><strong>Experience travel like you've never known before</strong></p>    
     </section>
 
     <section id="site-purpose">
-        <h2>Site Purpose</h2>
-        <p>The site provides travel guides, destination highlights, and planning tools to plan your next memory.</p>
+        <h2>Plan Your Trip</h2>
+        <form id="trip-form">
+            <label for="departure">Departure Date:</label>
+            <input type="date" id="departure" name="departure" required>
+
+            <label for="return">Return Date:</label>
+            <input type="date" id="return" name="return" required>
+
+            <label for="destination">Choose Destination:</label>
+            <input type="text" id="destination" name="destination" list="destinations-list">
+            <datalist id="destinations-list">
+                <option value="Bali, Indonesia">
+                <option value="Paris, France">
+                <option value="Kyoto, Japan">
+                <option value="Dubai, UAE">
+                <option value="Maldives">
+                <option value="Tokyo, Japan"></option>
+                <option value="Phuket, Thailand"></option>
+                <option value="Cabo San Lucas, Mexico"></option>
+                <option value="Lisbon, Portugal"></option>
+                <option value="Hanoi, Vietnam"></option>
+
+            </datalist>
+
+            <label for="trip-type">What type of trip are you planning?</label>
+            <select id="trip-type" name="trip-type">
+                <option value="luxury">Luxury</option>
+                <option value="budget">Budget-Friendly</option>
+                <option value="adventure">Adventure</option>
+                <option value="family">Family</option>
+                <option value="romantic">Romantic</option>
+            </select>
+
+            <label for="travelers">Number of Travelers:</label>
+            <input type="number" id="travelers" name="travelers" min="1" max="10" value="1">
+
+            <button type="submit">Find My Trips</button>
+        </form>
+
+        <div id="trip-result"></div>
     </section>
 
-    <section id="scenarios">
-        <h2>Scenarios</h2>
-        <ul>
-            <li>What are the top travel destinations for families?</li>
-            <li>How can I plan a budget-friendly international trip?</li>
-        </ul>
+    <section id="destinations-section">
+        <h2>Top Destinations</h2>
+        <div id="destinations-container"></div> 
     </section>
 
-    <section id="color-schema">
-        <h2>Color Schema</h2>
-        <p><strong>Primary Color:</strong> <span style="color: rgb(10, 100, 164);">Blue (rgb(10, 100, 164))</span> - Used for headings and accents</p>
-        <p><strong>Secondary Color:</strong> <span style="color: rgb(43, 128, 43);">Earthy Green (rgb(43, 128, 43))</span> - Used for buttons and highlights</p>
-    </section>
-
-    <section id="typography">
-        <h2>Typography</h2>
-        <p><strong>Heading Font:</strong> Merriweather (used for all headings)</p>
-        <p><strong>Body Font:</strong> Nunito Sans (used for body text and paragraphs)</p>
-    </section>
-
-    <section id="wireframe">
-        <h2>Wireframe</h2>
-        <p>Below are wireframe sketches for the home page:</p>
-        <ul>
-            <li><a href="wireframe-mobile.png" target="_blank"><img src="wireframe-mobile.png" alt="Wireframe Mobile View" width="200"></a></li>
-            <li><a href="wireframe-desktop.png" target="_blank"><img src="wireframe-desktop.png" alt="Wireframe Desktop View" width="200"></a></li>
-        </ul>
-    </section>
+    
 
     <footer>
-        <p>&copy; 2025 Bucket List Travels. All rights reserved.</p>
+        <div>
+            &copy; <span id="year"></span> Bucket List Travels. All rights reserved.
+        </div>
+        <div>
+            Last Update: <span id="last-modified"></span>
+        </div>
     </footer>
+    
 </body>
 </html>

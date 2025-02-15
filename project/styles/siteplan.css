@@ -16,6 +16,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: beige;
+    max-width: 1200px;
+    margin: 0 auto; 
+
 }
   
 
@@ -26,11 +29,57 @@ header {
     text-align: center;
 }
 
-h1, h2 {
+nav {
+    background-color: primary;
+}
+
+
+.main-nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+    border: none;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    flex-direction: row; 
+    margin: 0 auto;
+    padding: 0;
+    gap: 20px;       
+    
+}
+
+.main-nav a {
+    padding: 5px 1px;
+    border: none;
+    text-align: center; 
+
+}
+
+.main-nav a:focus, .main-nav a:active {
+    outline: none;
+    border: none;
+}
+
+
+.main-nav a:hover {
+    background-color: rgb(43, 128, 43);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h1, h2, h3, h4 {
     font-family: Merriweather, serif;
 }
 
-h2 {
+h2, h3 {
     color: rgb(43, 128, 43);
     text-align: center;
     
@@ -71,12 +120,361 @@ a {
     justify-content: center;
 }
 
-#wireframe ul {
+/*#wireframe ul {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 0;
     list-style-type: none;
+}*/
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Styling for individual images */
+.carousel-image {
+    width: 45%;  /* Each image takes up 45% of the container width */
+    height: 250px;  /* Fixed height for all images */
+    object-fit: cover;  /* Ensures images fit without distortion */
+    border: 10px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);  /* Start off-screen to the right */
+
+}
+
+#site-name p {
+    text-align: center;
+}
+
+#site-name p {
+    margin-top: 30px;
+}
+
+#site-purpose {
+    padding: 20px;
+    background-color: darkgray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#site-purpose h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(10, 100, 164);
+    text-align: center;
+}
+
+label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0;
+    color: #333;
+    padding: 0;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
+
+input[type="date"]#departure,
+input[type="date"]#return,
+input[type="text"]#destination,
+#trip-type,
+input[type="destination"]#return,
+input[type="number"]#travelers {
+    margin-top: 0;
+    padding: 5px;
+}
+
+/* Input field styling */
+input[type="date"],
+input[type="text"],
+input[type="number"],
+select {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="date"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Focused input field */
+input:focus,
+select:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.destination-image {
+    padding-top: 10px;
+    border: 10px solid white;
+    box-shadow: 0 0 20px lightgray;
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: rgb(10, 100, 164); /* Earthy Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: rgb(43, 128, 43); /* Blue */
+}
+
+/* Small text for error or extra info */
+#trip-result {
+    margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+#destinations-section {
+    padding: 20px;
+    background-color: white; /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the container that holds all destination cards */
+#destinations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Style for each individual destination card */
+.destination-card {
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.destination-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Style for the destination name (large and bold) */
+.destination-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Style for the destination description (smaller text) */
+.destination-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+/* Style for the "Mark as Visited" button */
+.destination-card button {
+    background-color: #28a745; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.destination-card button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Add a style for visited destinations (can change color or add a checkmark) */
+.visited .destination-card {
+    background-color: #d4edda; /* Light green background for visited */
+    border-left: 5px solid #28a745; /* Green left border */
+}
+
+.visited .destination-card button {
+    background-color: #6c757d; /* Grey button for visited places */
+    cursor: not-allowed; /* Disable button interaction */
+}
+
+.visited .destination-card button:hover {
+    background-color: #6c757d; /* Same grey button on hover */
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: left !important;       
+    }
+
+    .destination-image {
+        flex-shrink: 0;
+        max-width: 400px;
+        text-align: center;
+
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+#contact-us {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-us p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.contact-info h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shado 0.3 ease;
+    width: 100%;
+    max-width: 300px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-item h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 599px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) {
+    .carousel-image {
+        width: 80%;
+        object-fit: cover;
+        justify-content: flex-end;
+        display: block;
+    }
+
+    .content-container {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 18px;
+    }
+
+    #budget-destinations li,
+    #luxury-destinations li {
+        margin-bottom: 20px;    /* Add a bit more space between list items */
+    }
+
+    #budget-tips,
+    #luxury-tips {
+        text-align: center;
+        text-decoration: none !important;
+        list-style-type: none;
+        gap: 5px;
+    }
+
+    #budget-tips ul,
+    #luxury-tips ul {
+        list-style-type: none;
+    }
+
+    #budget-tips li,
+    #luxury-tips li {
+       font-size: 20px;
+       margin-bottom: 5px;
+    }
+    
+    .contact-info {
+    grid-template-columns: 1fr, 1fr, 1fr;
 }
 
 footer {

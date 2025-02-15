@@ -1,0 +1,23 @@
+let reviewCount = localStorage.getItem("reviewCount") ? parseInt(localStorage.getItem("reviewCount")) : 0;
+
+// Display the current review count
+document.getElementById("review-count").textContent = `Reviews Completed: ${reviewCount}`;
+
+// Function to handle review submission
+function submitReview(event) {
+    event.preventDefault(); // Prevent form refresh
+
+    // Increment review count
+    reviewCount++;
+
+    // Store updated count in localStorage
+    localStorage.setItem("reviewCount", reviewCount);
+
+    // Update the displayed count
+    document.getElementById("review-count").textContent = `Reviews Completed: ${reviewCount}`;
+
+    alert("Review submitted successfully!");
+}
+
+// Attach the function to the review form submission event
+document.getElementById("review-form").addEventListener("submit", submitReview);
